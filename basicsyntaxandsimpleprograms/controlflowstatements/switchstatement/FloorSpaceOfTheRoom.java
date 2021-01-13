@@ -71,7 +71,7 @@ public class FloorSpaceOfTheRoom {
         Scanner scan = new Scanner(System.in);
         double a, b, c, r;
         double area, resArea;
-        double output;
+        double output = 0;
         String roomShape = scan.next();
 
         switch (roomShape) {
@@ -81,6 +81,11 @@ public class FloorSpaceOfTheRoom {
                 c = scan.nextDouble();
                 area = (a + b + c) / 2.0d;
                 output = Math.sqrt(area * (area - a) * (area - b) * (area - c));
+                break;
+            case "rectangle":
+                a = scan.nextDouble();
+                b = scan.nextDouble();
+                output = a * b;
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + roomShape);
