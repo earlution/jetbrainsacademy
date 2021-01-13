@@ -44,7 +44,7 @@ public class Direction {
                 direction = "do not move";
                 break;
             default:
-                direction = "error";
+                direction = "error!";
                 break;
         }
         
