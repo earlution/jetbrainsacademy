@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int arrayLength = scanner.nextInt();
+        int[][] twoDimArray = new int[arrayLength][arrayLength];
+        String[] output = new String[5];
+        
+        for (int i = 0; i < arrayLength; i++) {
+            twoDimArray[0][i] = i;
+        }
+        
+        for (int i = 0; i < arrayLength; i++) {
+            for (int j = 0; j < arrayLength; i++) {
+                twoDimArray[i][j] = j+1 % arrayLength;
+            }
+        }
+        
+        for (int i = 0; i < arrayLength; i++) {
+            System.out.println(output.trim());
+        } 
+        
+        for (int i = 0; i < arrayLength; i++) {
+            for (int[] oneDimArray : twoDimArray[][]) {
+                output[i] = output + value + " ";
+        }
+        
+        for (String str : output) {
+            System.out.println(output.trim()); // trim() removes leading & trailing whitespace
+        }
+    }
+}
