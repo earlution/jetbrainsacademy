@@ -1,5 +1,6 @@
 package basicsyntaxandsimpleprograms.controlflowstatements.switchstatement;
 
+import java.util.Scanner;
 
 /**
  * Residents of the country of Malevia often experiment with the plan of their rooms. Rooms 
@@ -67,6 +68,24 @@ package basicsyntaxandsimpleprograms.controlflowstatements.switchstatement;
  */
 public class FloorSpaceOfTheRoom {
     public static void main(String[] args) {
-        // put your code here
+        Scanner scan = new Scanner(System.in);
+        double a, b, c, r;
+        double area, resArea;
+        double output;
+        String roomShape = scan.next();
+
+        switch (roomShape) {
+            case "triangle":
+                a = scan.nextDouble();
+                b = scan.nextDouble();
+                c = scan.nextDouble();
+                area = (a + b + c) / 2.0d;
+                output = Math.sqrt(area * (area - a) * (area - b) * (area - c));
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + roomShape);
+        }
+
+        System.out.println(output);
     }
 }
