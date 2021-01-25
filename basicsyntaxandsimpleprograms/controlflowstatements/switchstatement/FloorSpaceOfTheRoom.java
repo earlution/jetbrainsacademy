@@ -69,8 +69,12 @@ import java.util.Scanner;
 public class FloorSpaceOfTheRoom {
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        double a, b, c, r;
-        double area, resArea;
+        double pi = 3.14;
+        double a;
+        double b;
+        double c;
+        double r;
+        double area;
         double output = 0;
         String roomShape = scan.next();
 
@@ -79,6 +83,8 @@ public class FloorSpaceOfTheRoom {
                 a = scan.nextDouble();
                 b = scan.nextDouble();
                 c = scan.nextDouble();
+                // Heron's Formula for the area of a triangle
+                // https://www.mathopenref.com/heronsformula.html
                 area = (a + b + c) / 2.0d;
                 output = Math.sqrt(area * (area - a) * (area - b) * (area - c));
                 break;
@@ -86,6 +92,10 @@ public class FloorSpaceOfTheRoom {
                 a = scan.nextDouble();
                 b = scan.nextDouble();
                 output = a * b;
+                break;
+            case "circle":
+                r = scan.nextDouble();
+                output = pi * (r * r);
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + roomShape);
