@@ -1,4 +1,5 @@
-package basicsyntaxandsimpleprograms.methods;
+package basicsyntaxandsimpleprograms.methods.DeclaringAMethod;
+
 
 import java.util.Scanner;
 
